@@ -1,6 +1,6 @@
 @extends('layouts.master')
 
-@section('title', 'Daftar Wisata')
+@section('title', 'Daftar Foto')
 
 @section('content')
     @php
@@ -11,40 +11,31 @@
             <div class="col-12">
                 <div class="card">
                     <div class="card-body">
-                        <h4 class="box-title">Daftar Wisata</h4>
+                        <h4 class="box-title">Daftar Foto Wisata</h4>
+                        <small>{{ $wisata->nama_wisata}}</small>
                     </div>
                     <div class="card-body--">
                         <div class="table-stats order-table ov-h">
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th style="width: 5%;" >#</th>
-                                        <th style="width: 20%;">Nama Wisata</th>
-                                        <th style="width: 25%;">Deskripsi</th>
-                                        <th style="width: 10%;">Kategori</th>
-                                        <th style="width: 25%;">Alamat</th>
-                                        <th style="width: 15%;">Aksi</th>
+                                        <th>#</th>
+                                        <th>Nama Wisata</th>
+                                        <th>Foto</th>
+                                        <th>Default</th>
+                                        <th>Aksi</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @forelse ($items as $item)
                                         <tr>
                                             <td>{{ $i++ }}</td>
-                                            <td>{{ $item->nama_wisata }}</td>
-                                            <td>{{ Illuminate\Support\Str::limit($item->deskripsi, 50) }}</td>
-                                            <td>{{ $item->kategori }}</td>
-                                            <td>{{ $item->kecamatan }}, 
-                                                {{ $item->kabupaten }}, 
-                                                {{ $item->provinsi }}
-                                            </td>
+                                            <td>{{ $item->WisataRelation->nama_wisata }}</td>
                                             <td>
-                                                <a href="{{ route('wisata.galeri', $item->id) }}" class="btn btn-success btn-sm" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Gambar">
-                                                    <i class="fas fa-image"></i>
-                                                </a>
-                                                <a href="{{ route('wisata.edit', $item->id) }}" class="btn btn-primary btn-sm" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit">
-                                                    <i class="fas fa-pencil-alt"></i>
-                                                </a>
-
+                                                <img src="{{ url($item->url_foto) }}" alt="{{ $item->WisataRelation->nama_wisata }}"/>
+                                            </td>
+                                            <td>{{ $item->is_default ? 'Ya' : 'Tidak'}}</td>
+                                            <td>
                                                 <button class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#hapusModal" role="button">
                                                     <i class="fas fa-trash"></i>
                                                 </button>
@@ -66,7 +57,7 @@
                                                             </div>
                                                             <div class="modal-footer">
                                                                 <button type="button" class="btn btn-success" data-bs-dismiss="modal">Batal</button>
-                                                                <form action="{{ route('wisata.destroy', $item->id) }}" method="POST" class="d-inline">
+                                                                <form action="{{ route('galeri.destroy', $item->id) }}" method="POST" class="d-inline">
                                                                     @csrf
                                                                     @method('delete')
                                                                     <button class="btn btn-primary">Ya Hapus!</button>

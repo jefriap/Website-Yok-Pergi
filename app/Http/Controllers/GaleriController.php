@@ -4,14 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\GaleriModel;
-
 use App\Models\WisataModel;
-use App\Http\Requests\WisataRequest;
+use App\Models\GaleriModel;
+use App\Http\Requests\GaleriRequest;
 
-use RealRashid\SweetAlert\Facades\Alert;
-
-class WisataController extends Controller
+class GaleriController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -30,8 +27,9 @@ class WisataController extends Controller
      */
     public function index()
     {
-        $items = WisataModel::all()->sortBy('kategori');
-        return view('pages.wisata.index')->with([
+        $items = GaleriModel::with('WisataRelation')->get();
+
+        return view('pages.galeri.index')->with([
             'items' => $items
         ]);
     }
@@ -43,7 +41,10 @@ class WisataController extends Controller
      */
     public function create()
     {
-        return view('pages.wisata.create');
+        $wst = WisataModel::all();
+        return view('pages.galeri.create')->with([
+            'wst' => $wst
+        ]);
     }
 
     /**
@@ -52,14 +53,17 @@ class WisataController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(GaleriRequest $request)
     {
         $data = $request->all();
+        $data['url_foto'] = $request->file('url_foto')->store(
+            'assets/foto-wisata', 'public'
+        );
 
-        WisataModel::create($data);
+        GaleriModel::create($data);
         
         toast('Berhasil Ditambah','success');
-        return redirect()->route('wisata.index');
+        return redirect()->route('galeri.index');
     }
 
     /**
@@ -81,11 +85,7 @@ class WisataController extends Controller
      */
     public function edit($id)
     {
-        $item = WisataModel::findOrFail($id);
-
-        return view('pages.wisata.edit')->with([
-            'item' => $item
-        ]);
+        //
     }
 
     /**
@@ -97,13 +97,7 @@ class WisataController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = $request->all();
-
-        $item = WisataModel::findOrFail($id);
-        $item->update($data);
-
-        toast('Berhasil Diubah','success');
-        return redirect()->route('wisata.index');
+        //
     }
 
     /**
@@ -114,25 +108,10 @@ class WisataController extends Controller
      */
     public function destroy($id)
     {
-        $item = WisataModel::findOrFail($id);
+        $item = GaleriModel::findOrFail($id);
         $item -> delete();
-
-        GaleriModel::where('wisata_id', $id)->delete();
-
+        
         toast('Berhasil Dihapus','success');
         return redirect()->route('wisata.index');
-    }
-
-    public function galeri($id)
-    {
-        $wisata = WisataModel::findOrFail($id);
-        $items = GaleriModel::with('wisataRelation')
-            ->where('wisata_id', $id)
-            ->get();
-
-        return view('pages.wisata.galeri')->with([
-            'wisata' => $wisata,
-            'items' => $items
-        ]);
     }
 }

@@ -16,10 +16,10 @@
 
                 <li class="menu-title">Foto wisata</li><!-- /.menu-title -->
                 <li class="nav-item">
-                    <a href="#" class="nav-link"> <i class="menu-icon fa fa-list"></i>Lihat Foto Wisata</a>
+                    <a href="{{ route('galeri.index') }}" class="nav-link"> <i class="menu-icon fa fa-list"></i>Lihat Foto Wisata</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#" class="nav-link"> <i class="menu-icon fa fa-list"></i>Tambah Foto Wisata</a>
+                    <a href="{{ route('galeri.create') }}" class="nav-link"> <i class="menu-icon fa fa-list"></i>Tambah Foto Wisata</a>
                 </li>
             </ul>
         </div><!-- /.navbar-collapse -->

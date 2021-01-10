@@ -26,8 +26,8 @@ class WisataModel extends Model
 
     ];
 
-    public function daerahRelation()
+    public function galeriRelation()
     {
-        return $this->belongsTo(DaerahModel::class, 'daerah_id', 'id');
+        return $this->hasMany(DaerahModel::class, 'wisata_id');
     }
 }

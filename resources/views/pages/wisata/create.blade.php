@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+@section('title', 'Tambah Wisata')
+
 @section('content')
     <div class="card">
         <div class="card-header">

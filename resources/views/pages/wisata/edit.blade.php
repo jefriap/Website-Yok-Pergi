@@ -1,5 +1,7 @@
 @extends('layouts.master')
 
+@section('title', 'Edit Wisata')
+
 @section('content')
     <div class="card">
         <div class="card-header">
@@ -27,8 +29,7 @@
                            class="form-control-label">Deskripsi</label>
                     <textarea name="deskripsi" 
                               id="deskripsi" 
-                              class="form-control @error('deskripsi') is-invalid @enderror">{{ old('deskripsi') ? old('deskripsi') : $item->deskripsi }}
-                    </textarea>
+                              class="form-control @error('deskripsi') is-invalid @enderror">{{ old('deskripsi') ? old('deskripsi') : $item->deskripsi }}</textarea>
                 </div>
                 <div class="form-group mt-2">
                     <label for="kategori">Kategori</label>
