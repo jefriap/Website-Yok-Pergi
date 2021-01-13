@@ -115,6 +115,6 @@ class GaleriController extends Controller
         $item -> delete();
         
         toast('Berhasil Dihapus','success');
-        return redirect()->route('wisata.index');
+        return redirect()->route('galeri.index');
     }
 }

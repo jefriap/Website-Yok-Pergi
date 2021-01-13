@@ -3,7 +3,7 @@
         <div id="main-menu" class="main-menu collapse navbar-collapse">
             <ul class="nav navbar-nav">
                 <li class="active nav-item">
-                    <a href="{{ route('dashboard') }}" class="nav-link"><i class="menu-icon fa fa-laptop"></i>Dashboard </a>
+                    <a href="/" class="nav-link"><i class="menu-icon fa fa-laptop"></i>Landing Page </a>
                 </li>
 
                 <li class="menu-title">Wisata</li><!-- /.menu-title -->
