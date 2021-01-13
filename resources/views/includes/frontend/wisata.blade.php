@@ -44,7 +44,7 @@
                 <h3>
                   Tidak tersedia!
                 </h3>
-                <p>
+                <p class="text-justify">
                   Belum ada artikel Wisata Daerah 
                 </p>
               </div>

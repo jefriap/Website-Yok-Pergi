@@ -45,7 +45,7 @@
                 </div>
               @endforeach
             @empty
-                <p>
+                <p class="text-justify">
                   Belum ada gambar.
                 </p>
             @endforelse
