@@ -26,7 +26,7 @@ Auth::routes();
 Route::get('/', [BlogController::class, 'index'])->name('blog.index');
 Route::get('detail/{slug}/wisata/{id}', [BlogController::class, 'wisata'])->name('blog.detail');
 
-Route::get('/admin', [WisataController::class, 'index']);
+Route::get('/admin', [WisataController::class, 'index'])->name('dashboard');
 
 Route::get('wisata/{wisatum}/galeri', [WisataController::class, 'galeri'])->name('wisata.galeri');
 
