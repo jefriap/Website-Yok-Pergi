@@ -90,7 +90,7 @@
                                 <div class="product-thumbs-track ps-slider owl-carousel">
                                     @foreach ($items as $item)
                                     <div class="pt active" data-imgbigurl="{{ url($item->url_foto) }}">
-                                        <img src="{{ url($item->url_foto) }}" alt="" />
+                                        <img src="{{asset('uploads/foto-wisata')}}/{{$item->url_foto}}" alt="" />
                                     </div>
                                     @endforeach
                                 </div>

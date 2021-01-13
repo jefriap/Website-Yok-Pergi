@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\WisataModel;
 use App\Models\GaleriModel;
 use App\Http\Requests\GaleriRequest;
+use File;
 
 class GaleriController extends Controller
 {
@@ -56,9 +57,11 @@ class GaleriController extends Controller
     public function store(GaleriRequest $request)
     {
         $data = $request->all();
-        $data['url_foto'] = $request->file('url_foto')->store(
-            'assets/foto-wisata', 'public'
-        );
+        
+        $nama_url_foto = $request->file('url_foto')->getClientOriginalName();
+        $url_foto = $request->file('url_foto')->move('uploads/foto-wisata', $nama_url_foto);
+        $data['url_foto'] = $nama_url_foto;
+
 
         GaleriModel::create($data);
         
@@ -97,7 +100,7 @@ class GaleriController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        // 
     }
 
     /**

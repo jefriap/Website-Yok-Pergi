@@ -17,7 +17,7 @@
               <div class="blog-item-wrapper">
                 <div class="blog-item-img">
                   <a href="{{ route('blog.detail', [$wisata->slug, $wisata->id]) }}">
-                    <img src="{{ $foto->url_foto }}" alt="">
+                    <img src="{{asset('uploads/foto-wisata')}}/{{ $foto->url_foto }}" alt="">
                   </a>                
                 </div>
                 <div class="blog-item-text"> 

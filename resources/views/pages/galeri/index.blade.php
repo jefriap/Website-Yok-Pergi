@@ -31,7 +31,7 @@
                                             <td>{{ $i++ }}</td>
                                             <td>{{ $item->WisataRelation->nama_wisata }}</td>
                                             <td>
-                                                <img src="{{ url($item->url_foto) }}" alt="{{ $item->WisataRelation->nama_wisata }}"/>
+                                                <img src="{{asset('uploads/foto-wisata')}}/{{$item->url_foto}}" alt="{{ $item->WisataRelation->nama_wisata }}"/>
                                             </td>
                                             <td>{{ $item->is_default ? 'Ya' : 'Tidak'}}</td>
                                             <td>

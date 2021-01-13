@@ -36,8 +36,8 @@
                 <div class="col-sm-6 col-md-4 col-lg-4 col-xl-4 mix {{ $wisata->kategori }}">
                   <div class="portfolio-item">
                     <div class="shot-item">
-                      <img src="{{ url($foto->url_foto) }}" alt=""  />  
-                      <a class="overlay lightbox" href="{{ url($foto->url_foto) }}" data-toggle="tooltip" data-placement="bottom" title="{{ $wisata->nama_wisata }}">
+                      <img src="{{asset('uploads/foto-wisata')}}/{{$foto->url_foto}}" alt=""  />  
+                      <a class="overlay lightbox" href="{{asset('uploads/foto-wisata')}}/{{$foto->url_foto}}" data-toggle="tooltip" data-placement="bottom" title="{{ $wisata->nama_wisata }}">
                         <i class="lnr lnr-eye item-icon"></i>
                       </a>
                     </div>               

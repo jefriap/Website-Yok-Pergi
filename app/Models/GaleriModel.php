@@ -29,8 +29,4 @@ class GaleriModel extends Model
     {
         return $this->belongsTo(WisataModel::class, 'wisata_id', 'id');
     }
-
-    public function getUrlFotoAttribute($value){
-        return url('storage/' . $value);
-    }
 }
