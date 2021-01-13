@@ -81,7 +81,7 @@
                             <div class="product-pic-zoom">
                                 @foreach ($wisataData as $data)
                                     @foreach ($data->galeriRelasiIndex as $foto)
-                                            <img class="product-big-img" src="{{ url($foto->url_foto) }}" alt="">
+                                            <img class="product-big-img" src="{{asset('uploads/foto-wisata')}}/{{$foto->url_foto}}" alt="">
                                     @endforeach
                                 @endforeach
                             </div>
