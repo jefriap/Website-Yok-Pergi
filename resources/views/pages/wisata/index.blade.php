@@ -33,9 +33,14 @@
                                             <td>{{ $item->nama_wisata }}</td>
                                             <td>{{ Illuminate\Support\Str::limit($item->deskripsi, 50) }}</td>
                                             <td>{{ $item->kategori }}</td>
-                                            <td>{{ $item->kecamatan }}, 
-                                                {{ $item->kabupaten }}, 
-                                                {{ $item->provinsi }}
+                                            <td>
+                                                @if ($item->kecamatan == null && $item->kabupaten == null)
+                                                    {{ $item->provinsi }}
+                                                @elseif ($item->kecamatan == null)
+                                                    {{ $item->kabupaten }}, {{ $item->provinsi }}
+                                                @else
+                                                    {{ $item->kecamatan }}, {{ $item->kabupaten }}, {{ $item->provinsi }}
+                                                @endif
                                             </td>
                                             <td>
                                                 <a href="{{ route('wisata.galeri', $item->id) }}" class="btn btn-success btn-sm" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Gambar">

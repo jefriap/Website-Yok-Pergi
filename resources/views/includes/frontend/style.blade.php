@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="{{ asset('frontend/css/bootstrap.min.css') }}">
+<link rel="stylesheet" href="{{ asset('frontend/css/all-fontawesome.min.css') }}">
+<link rel="stylesheet" href="{{ asset('frontend/css/line-icons.css') }}">
+<link rel="stylesheet" href="{{ asset('frontend/css/owl.carousel.css') }}">
+<link rel="stylesheet" href="{{ asset('frontend/css/owl.theme.css') }}">
+<link rel="stylesheet" href="{{ asset('frontend/css/nivo-lightbox.css') }}">
+<link rel="stylesheet" href="{{ asset('frontend/css/magnific-popup.css') }}">
+<link rel="stylesheet" href="{{ asset('frontend/css/slicknav.css') }}">
+<link rel="stylesheet" href="{{ asset('frontend/css/animate.css') }}">
+<link rel="stylesheet" href="{{ asset('frontend/css/main.css') }}">    
+<link rel="stylesheet" href="{{ asset('frontend/css/responsive.css') }}">

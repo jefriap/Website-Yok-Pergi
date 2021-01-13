@@ -15,6 +15,7 @@ class WisataModel extends Model
 
     protected $fillable = [
         'nama_wisata', 
+        'slug',
         'deskripsi',
         'kategori',
         'kecamatan',
@@ -26,8 +27,14 @@ class WisataModel extends Model
 
     ];
 
-    public function galeriRelation()
+    public function galeriRelasiIndex()
     {
-        return $this->hasMany(DaerahModel::class, 'wisata_id');
+        return $this->hasMany(GaleriModel::class, 'wisata_id')
+                    ->where('is_default', '=', 1);
+    }
+
+    public function galeriRelasiDetail()
+    {
+        return $this->hasMany(GaleriModel::class, 'wisata_id');
     }
 }

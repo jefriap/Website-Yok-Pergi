@@ -24,8 +24,9 @@ class WisataRequest extends FormRequest
     public function rules()
     {
         return [
-            'kecamatan' => 'required|max:20',
-            'kabupaten' => 'required|max:20',
+            'nama_wisata' => 'required|max:50',
+            'deskripsi' => 'required',
+            'kategori' => 'required|max:20',
             'provinsi' => 'required|max:20'
         ];
     }

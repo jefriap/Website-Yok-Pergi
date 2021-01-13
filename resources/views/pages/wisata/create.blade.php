@@ -36,7 +36,7 @@
                       <option>Pantai</option>
                       <option>Candi</option>
                       <option>Danau</option>
-                      <option>Gunung/Bukit</option>
+                      <option>Gunung</option>
                     </select>
                 </div>
                 <div class="row mt-2">

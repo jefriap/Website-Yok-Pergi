@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 use App\Models\GaleriModel;
 
@@ -52,9 +53,10 @@ class WisataController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(WisataRequest $request)
     {
         $data = $request->all();
+        $data['slug'] = Str::slug($request->nama_wisata);
 
         WisataModel::create($data);
         
