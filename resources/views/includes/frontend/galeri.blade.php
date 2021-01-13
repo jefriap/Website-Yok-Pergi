@@ -4,7 +4,7 @@
         <div class="section-header">          
           <h2 class="section-title">Gambar Wisata</h2>
           <hr class="lines">
-          <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, dignissimos! <br> Lorem ipsum dolor sit amet, consectetur.</p>
+          <p class="section-subtitle">Berikut adalah kumpulan foto-foto dari wisata daerah Indonesia.</p>
         </div>
         <div class="row">          
           <div class="col-md-12">
