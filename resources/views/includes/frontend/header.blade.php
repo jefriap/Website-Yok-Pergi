@@ -29,30 +29,18 @@
 
       <!-- Mobile Menu Start -->
       <ul class="mobile-menu">
-         <li>
-            <a class="page-scroll" href="#hero-area">Home</a>
-          </li>
-          <li>
-            <a class="page-scroll" href="#services">Layanan</a>
-          </li>
-          <li>
-            <a class="page-scroll" href="#features">Informasi</a>
-          </li>
-          <li>
-            <a class="page-scroll" href="#portfolios">Wisata</a>
-          </li>
-          <li>
-            <a class="page-scroll" href="#pricing">Daerah</a>
-          </li>
-          <li>
-            <a class="page-scroll" href="#team">Team</a>
-          </li>
-          <li >
-            <a class="page-scroll" href="#blog">Blog</a>
-          </li>
-          <li>
-            <a class="page-scroll" href="#contact">Contact</a>
-          </li>
+        <li class="nav-item">
+          <a class="page-scroll" href="#hero-area">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="page-scroll" href="#blog">Wisata</a>
+        </li>
+        <li class="nav-item">
+          <a class="page-scroll" href="#features">Informasi</a>
+        </li>
+        <li class="nav-item">
+          <a class="page-scroll" href="#portfolios">Gambar</a>
+        </li>
       </ul>
       <!-- Mobile Menu End -->
 

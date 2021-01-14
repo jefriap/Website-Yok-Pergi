@@ -7,7 +7,7 @@
       <div class="section-header">          
         <h2 class="section-title">Wisata Daerah</h2>
         <hr class="lines">
-        <p class="section-subtitle">Menampilkan deretan informasi seputar wisata-wisata daerah yang ada di Indonesia, berupa candi-candi, pantai, pegunungan, dan danau.</p>
+        <p class="section-subtitle">Menampilkan deretan informasi seputar wisata-wisata daerah yang ada di Indonesia, berupa candi, pantai, pegunungan, dan danau.</p>
       </div>
       <div class="row">
         @forelse ($dataWisata as $wisata)
