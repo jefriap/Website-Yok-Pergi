@@ -6,7 +6,7 @@
 Website Blog sederhana yang berisi informasi tentang destinasi wisata-wisata daerah di Indonesia. Website ini dibuat untuk keperluan Tugas Akhir Matakuliah Pemrograman Berbasis Website. Web ini dibuat dengan :
 
 - Laravel 8
-- [Bootsrapt](https://getbootstrap.com)
+- [Bootstrap](https://getbootstrap.com)
 - Free hosting [heroku](https://heroku.com)
 
 Berikut tampilan websitennya [yok!pergi](http://yok-pergi.herokuapp.com).
