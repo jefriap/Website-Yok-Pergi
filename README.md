@@ -1,4 +1,4 @@
-<p align="center"><a href="http://yok-pergi.herokuapp.com" target="_blank"><img src="https://drive.google.com/file/d/1_moe4JigeSGvFFp-fSI-e6Ds1IcQkCS5/view?usp=sharing" width="400"></a></p>
+<p align="center"><a href="http://yok-pergi.herokuapp.com" target="_blank"><img src="http://yok-pergi.herokuapp.com/frontend/img/logo.png" width="400"></a></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
